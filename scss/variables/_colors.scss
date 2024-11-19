@@ -2,3 +2,28 @@ $white: #fff;
 $black: #000;
 
 // add the $colors map here (2 dimensional map)
+
+$colors: (
+  primary: (
+    light: #e3f2fd,
+    main: #2196f3,
+    dark: #1e88e5,
+  ),
+  secondary: (
+    light: #f3e5f5,
+    main: #9c27b0,
+    dark: #7b1fa2,
+  ),
+  success: (
+    light: #e8f5e9,
+    main: #4caf50,
+    dark: #388e3c,
+  ),
+  danger: (
+    light: #ffebee,
+    main: #f44336,
+    dark: #d32f2f,
+  ),
+);
+
+@use '../variables' as *;
