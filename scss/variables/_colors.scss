@@ -4,26 +4,23 @@ $black: #000;
 // add the $colors map here (2 dimensional map)
 
 $colors: (
-  primary: (
-    light: #e3f2fd,
-    main: #2196f3,
-    dark: #1e88e5,
+  brand: (
+    400: #b692f6,
   ),
-  secondary: (
-    light: #f3e5f5,
-    main: #9c27b0,
-    dark: #7b1fa2,
+  warning: (
+    600: #dc6803,
+  ),
+  error: (
+    500: #f04438,
   ),
   success: (
-    light: #e8f5e9,
-    main: #4caf50,
-    dark: #388e3c,
+    700: #067647,
   ),
-  danger: (
-    light: #ffebee,
-    main: #f44336,
-    dark: #d32f2f,
+  gray: (
+    600: #475467,
   ),
 );
 
-@use '../variables' as *;
+@function get-color($category, $shade) {
+  @return map-get(map-get($colors, $category), $shade);
+}
